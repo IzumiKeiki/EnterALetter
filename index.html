@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Enter a letter</title>
+  </head>
+  <body>
+    <h1>Halloween</h1>
+    <p>Guess the word - Enter a letter</p>
+    <button id="hint">Hint</button>
+
+    <div class="game-container">
+      <div class="figure-container">
+        <svg height="300" width="500">
+          <line x1="125" y1="200" x2="225" y2="250" />
+          <line x1="225" y1="250" x2="325" y2="200" />
+          <line x1="325" y1="200" x2="425" y2="250" />
+        </svg>
+        <img src="Tree.png" class="tree" />
+        <img src="Ghosts.png" class="ghosts" />
+      </div>
+
+      <div class="word-container">
+        <div class="word" id="word"></div>
+        <div class="mobile">
+          <input
+            class="mobileinput"
+            type="text"
+            placeholder="input for touchscreen"
+          />
+        </div>
+        <div class="wrong-letter-container">
+          <div id="wrong-letters"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="advice">
+      <p>Enter a letter ( you should start with vowels )</p>
+      <p>Don't push "Hint" too many times</p>
+      <p>Watch those ghosts moving !</p>
+    </div>
+
+    <div class="popup-container" id="popup-container">
+      <div class="popup-win">
+        <h2>Congratulations! You won! 🎉</h2>
+        <h3 id="reveal-word"></h3>
+        <button class="play-button">Play again</button>
+      </div>
+      <div class="popup-lose">
+        <h2>Unfortunately! You lost. 😕</h2>
+        <h3 id="reveal-word2"></h3>
+        <button class="play-button">Play again</button>
+      </div>
+    </div>
+
+    <div class="notification-container" id="notification-container">
+      <p>You have already entered this letter</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
